@@ -1,0 +1,138 @@
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e8edf6 0%, #f0f4f9 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #6d9dc5;
+    color: #fff;
+}
+
+header .container {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Navigation links */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li {
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Todo container styling */
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.todo-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #6d9dc5;
+}
+
+/* Todo items styling */
+.todo {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f9fafc;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.todo_value {
+    background: transparent;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 0 10px;
+    color: #6d9dc5;
+}
+
+.todo_value::placeholder {
+    color: #b0c4db;
+}
+
+.todo_checkbox {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.todo:has(.todo_checkbox:checked) .todo_value {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.todo:has(.todo_checkbox:checked) {
+    background: #e2e6ea;
+    box-shadow: none;
+}
